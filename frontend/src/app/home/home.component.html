@@ -1,0 +1,34 @@
+
+<img style="width: 100%;height: 50%;" src="https://previews.123rf.com/images/arrow/arrow1508/arrow150800011/43834601-online-shopping-e-commerce-flat-design-concept-banner-background.jpg">
+
+<div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12"  *ngFor="let product of productcategories;let i=index;">
+                <div class="card" style="width: 100%; margin-bottom: 10px;" (click)="onclick(i,product)">
+                  <div class="card-body">
+                    {{i+1}}.<h5 class="card-title" style="text-align: center;">{{product}}  &nbsp;<span *ngIf="visible &&  index==i"><i class="fa fa-window-close" aria-hidden="true"></i>
+                    </span></h5>
+                  </div>
+                </div>
+                <!--will create if condition my default it will
+                  b hide on click it will toggle--->
+                <ng-container *ngIf="visible && index==i">
+                    <div class="bg-white shadow-sm p-3">
+                      <div class="row">
+                        <div class="col-md-4" *ngFor="let product of products">
+                          <div class="card" style="width: 18rem; margin-bottom: 10px;">
+                            <img [src]="product.thumbnail" height="200" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">{{product.title}}</h5>
+                              <p class="card-text">Price: ₹ {{product.price}}/-</p>
+                              <a  class="btn btn-primary">Buy</a>
+                            </div>
+                          </div>
+                            </div>
+                          </div>
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+    </div>

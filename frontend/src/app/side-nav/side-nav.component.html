@@ -1,0 +1,25 @@
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-blue">
+  <a class="navbar-brand" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR7IP0MmeFhEjs5aRfJmCI93Wi6MvskUFJdWhqdLzu4tByDLg-Y&usqp=CAU" width="80" height="50">Shoppify</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" *ngIf="userDetails">
+        <a class="nav-link" >{{userDetails.fullName.split(' ')[0]}} {{userDetails.fullName.split(' ')[1]}}</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" (click)="onLogout()" style="background-color: rgb(173, 173, 173);border-radius: 2px;">Log Out</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

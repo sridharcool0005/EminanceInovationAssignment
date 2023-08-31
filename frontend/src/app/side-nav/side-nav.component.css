@@ -1,0 +1,13 @@
+img {
+  width: 34%;
+  /* margin-right: -11%; */
+}
+a.nav-link {
+  color: black !important;
+}
+ul.navbar-nav {
+  margin-left: 65%;
+}
+.navbar-dark .navbar-brand {
+  color: #534646;
+}
